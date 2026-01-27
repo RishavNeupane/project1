@@ -1,23 +1,12 @@
-import { useState } from "react";
+import Inputfield from "./components/Inputfield";
 
 const App=() => {
-  const [name, setName] = useState("");
 
-  return (
+  return(
     <>
-
-    <div>
-      <h2> Name </h2>
-      <input value = {name}  onChange = {(event) => setName(event.target.value)} placeholder = "Type Here"/>
-    </div>
-
-    <div>
-      
-    <h2>You Entered: {name}</h2>
-
-    </div>
-
+    <Inputfield/>
     </>
-  )
-}
+  );
+
+};
 export default App;
