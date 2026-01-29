@@ -1,31 +1,22 @@
-import { useState } from "react";
 import "./App.css";
+import Counter from "./components/Counter";
+import Greetings from "./components/Greetings";
+import Clzname from "./components/Clzname";
+import { useState } from "react";
+
 
 const Monoapp =()=> {
   const [count, setCount] = useState(0);
-  const word1 = "Class";
-  const word2 = "React JS";
-
-  // const handleClick = ()=>{
-  //  setCount(prevCount => prevCount + 1);
-  // }
-
+  const clzname = "ABC College";
   return (
     <>
-      <h1>Counter</h1>
-      <div className="card">
-        {/* <button onClick={handleClick}> */}
-        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Counter count={count} setCount={setCount} />
+      <br />
+      <Greetings />
+      <br />
+      <p>Hello,{count}</p>
+      <Clzname clz={clzname} />
 
-      <h1>Greetings</h1>
-      <div>
-        <p>
-          Hello {word1}, Is {word2} easy ?
-        </p>
-      </div>
     </>
   );
 }

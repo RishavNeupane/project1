@@ -8,7 +8,7 @@ const Inputfield = () => {
     <>
 
     <div>
-      <h2> Name </h2>
+      <h2> Add Note </h2>
       <input value = {name}  onChange = {(event) => setName(event.target.value)} placeholder = "Type Here"/>
       <h2>Age</h2>
       <input type="number" value = {age} onChange={(event) => setAge(event.target.value)} placeholder = "Type Here"/>
